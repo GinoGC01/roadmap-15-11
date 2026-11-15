@@ -1,0 +1,284 @@
+/* =========================================================
+   Componentes de interfaz compartidos
+   ========================================================= */
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-raised);
+  border: 1px solid var(--edge);
+  padding: 1.15rem 1.25rem;
+}
+
+.card--flat {
+  box-shadow: var(--shadow-raised-sm);
+}
+
+.card--inset {
+  box-shadow: var(--shadow-inset);
+}
+
+.card--tight {
+  padding: 0.85rem 0.95rem;
+}
+
+.card--accent {
+  border-top: 3px solid var(--accent);
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-raised-sm);
+  transition: box-shadow var(--speed) var(--ease), transform var(--speed) var(--ease),
+    color var(--speed) var(--ease);
+}
+
+.btn:hover {
+  color: var(--accent-deep);
+}
+
+.btn:active {
+  box-shadow: var(--shadow-inset-sm);
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn--primary:hover {
+  color: var(--accent-ink);
+}
+
+.btn--ghost {
+  box-shadow: none;
+  color: var(--ink-soft);
+}
+
+.btn--ghost:hover {
+  color: var(--accent-deep);
+}
+
+.btn--sm {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--fs-xs);
+}
+
+.btn--icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: var(--shadow-raised-xs);
+}
+
+/* ---------- Badge / chips ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--ink-soft);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge--solid {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.badge--outline {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--accent-soft);
+}
+
+.badge--muted {
+  background: var(--paper-deep);
+  color: var(--ink-faint);
+}
+
+/* ---------- Inputs ---------- */
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-sm);
+  color: var(--ink);
+  font-size: var(--fs-sm);
+  resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 1px;
+}
+
+/* ---------- Checkbox neumórfico ---------- */
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 9px;
+  background: var(--paper);
+  box-shadow: var(--shadow-raised-xs);
+  cursor: pointer;
+  color: transparent;
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: box-shadow var(--speed) var(--ease), background var(--speed) var(--ease),
+    color var(--speed) var(--ease);
+}
+
+.check:hover {
+  color: var(--accent-deep);
+}
+
+.check--on {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-inset-sm);
+}
+
+.check--round {
+  border-radius: 50%;
+}
+
+.check:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
+}
+
+/* ---------- Barra de progreso ---------- */
+.progress {
+  position: relative;
+  height: 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  box-shadow: var(--shadow-inset-sm);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  transition: width 320ms var(--ease);
+}
+
+.progress--thin {
+  height: 0.35rem;
+}
+
+/* ---------- Texto enriquecido ---------- */
+.rich code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: var(--paper-deep);
+  color: var(--accent-deep);
+  font-size: 0.92em;
+}
+
+.rich strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.rich a {
+  border-bottom-style: solid;
+}
+
+/* ---------- Diálogo de confirmación ---------- */
+.confirm {
+  width: min(26rem, calc(100% - 2rem));
+  padding: 1.4rem 1.5rem 1.25rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow-raised);
+  animation: confirm-in 180ms var(--ease);
+}
+
+.confirm::backdrop {
+  background: var(--backdrop);
+  backdrop-filter: blur(2px);
+}
+
+.confirm__title {
+  font-size: var(--fs-lg);
+  margin-bottom: 0.4rem;
+}
+
+.confirm__message {
+  font-size: var(--fs-sm);
+  max-width: 46ch;
+}
+
+.confirm__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+@keyframes confirm-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- Separador ---------- */
+.divider {
+  height: 1px;
+  border: none;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, var(--ink-faint) 20%, var(--ink-faint) 80%, transparent);
+  opacity: 0.35;
+}

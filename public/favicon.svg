@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#f1eee7" />
+  <rect x="5" y="5" width="54" height="54" rx="12" fill="none" stroke="#e9e5dc" stroke-width="2" />
+  <rect x="12" y="14" width="24" height="24" rx="7" fill="#a9c4b1" />
+  <text
+    x="24"
+    y="31"
+    text-anchor="middle"
+    font-family="ui-monospace, Menlo, Consolas, monospace"
+    font-size="15"
+    font-weight="700"
+    fill="#33483b"
+  >
+    C
+  </text>
+  <text
+    x="45"
+    y="31"
+    text-anchor="middle"
+    font-family="ui-monospace, Menlo, Consolas, monospace"
+    font-size="17"
+    font-weight="700"
+    fill="#46453f"
+  >
+    +
+  </text>
+  <path
+    d="M14 50 q8 -7 16 0 t20 0"
+    fill="none"
+    stroke="#aebfd6"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+  <circle cx="50" cy="50" r="3.4" fill="#d5b6c4" />
+</svg>

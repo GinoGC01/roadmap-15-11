@@ -1,0 +1,109 @@
+/* =========================================================
+   Tokens: paleta pastel de libro + sombras neumórficas
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* Superficie base (una sola, requisito del neumorphism) */
+  --paper: #f1eee7;
+  --paper-deep: #e9e5dc;
+
+  /* Tinta */
+  --ink: #46453f;
+  --ink-soft: #706d65;
+  --ink-faint: #97938a;
+
+  /* Acentos pastel desaturados */
+  --pastel-sage: #a9c4b1;
+  --pastel-blue: #aebfd6;
+  --pastel-rose: #d5b6c4;
+  --pastel-lavender: #c3bce0;
+  --pastel-pistachio: #c3d6b8;
+  --pastel-sand: #dfcda4;
+  --pastel-clay: #d6bfae;
+
+  /* Acento activo (lo redefine la etapa en contexto) */
+  --accent: var(--pastel-sage);
+  --accent-deep: #7f9c88;
+  --accent-ink: #33483b;
+  --accent-soft: rgba(169, 196, 177, 0.32);
+
+  /* Semánticos */
+  --ok: #8fae8a;
+  --warn: #d3b078;
+  --danger: #cf9b93;
+
+  /* Neumorphism */
+  --shadow-light: rgba(255, 255, 255, 0.9);
+  --shadow-dark: rgba(154, 144, 125, 0.52);
+  --shadow-raised: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+  --shadow-raised-sm: 5px 5px 11px var(--shadow-dark), -5px -5px 11px var(--shadow-light);
+  --shadow-raised-xs: 3px 3px 7px var(--shadow-dark), -3px -3px 7px var(--shadow-light);
+  --shadow-inset: inset 4px 4px 9px var(--shadow-dark), inset -4px -4px 9px var(--shadow-light);
+  --shadow-inset-sm: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+  --shadow-flat: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --edge: rgba(255, 255, 255, 0.5);
+  --track: rgba(120, 112, 96, 0.18);
+  --backdrop: rgba(52, 49, 43, 0.32);
+
+  /* Formas */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius: 18px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
+
+  /* Tipografía */
+  --font-mono: 'Source Code Pro', ui-monospace, 'SFMono-Regular', 'Cascadia Mono', 'Menlo', monospace;
+  --fs-xs: 0.72rem;
+  --fs-sm: 0.8rem;
+  --fs-base: 0.9rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: 1.45rem;
+  --fs-2xl: 1.9rem;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --speed: 160ms;
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --topbar-h: 68px;
+  --content-max: 1120px;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --paper: #212428;
+  --paper-deep: #1a1c1f;
+
+  --ink: #e8e4da;
+  --ink-soft: #aea99f;
+  --ink-faint: #837f77;
+
+  --pastel-sage: #85a68d;
+  --pastel-blue: #8aa0ba;
+  --pastel-rose: #b08797;
+  --pastel-lavender: #9d95be;
+  --pastel-pistachio: #93ac85;
+  --pastel-sand: #b7a074;
+  --pastel-clay: #b09381;
+
+  --accent-deep: #9dbda5;
+  --accent-ink: #1b2420;
+  --accent-soft: rgba(133, 166, 141, 0.24);
+
+  --ok: #85a681;
+  --warn: #c09f6d;
+  --danger: #b8837b;
+
+  --shadow-light: rgba(255, 255, 255, 0.04);
+  --shadow-dark: rgba(0, 0, 0, 0.72);
+  --shadow-flat: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --edge: rgba(255, 255, 255, 0.045);
+  --track: rgba(0, 0, 0, 0.45);
+  --backdrop: rgba(8, 9, 10, 0.55);
+}
